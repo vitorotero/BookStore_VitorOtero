@@ -7,14 +7,36 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BooksCollectionViewCell: UICollectionViewCell {
 
+    // MARK: - IBOutlets
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet weak var bookNameLabel: UILabel!
+    
+    // MARK: - Properties
     public static let identifier = "BooksCollectionViewCell"
     
+    // MARK: - Methods
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupView()
+    }
+    
+    private func setupView() {
+        mainView.layer.cornerRadius = 5
+        thumbnailImageView.kf.indicatorType = .activity
+    }
+    
+    func setup(item: Book) {
+        if let images = item.volumeInfo?.imageLinks {
+            let url = URL(string: images.thumbnail)
+            thumbnailImageView.kf.setImage(with: url)
+        }
+        
+        bookNameLabel.text = item.volumeInfo?.title
     }
 
 }

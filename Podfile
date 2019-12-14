@@ -8,6 +8,7 @@ target 'BookStore_VitorOtero' do
   
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Kingfisher', '~> 5.12'
 
   # Pods for BookStore_VitorOtero
 

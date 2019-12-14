@@ -14,20 +14,21 @@ class BooksViewModel {
     
     private var bookProvider: BookProviderProtocol!
     private let disposeBag: DisposeBag = DisposeBag()
+    private var bookRequest = BookRequest()
     
     var books = BehaviorRelay<[Book]>(value: [Book]())
-//    var openDetailPhoto = BehaviorRelay<Photo?>(value: nil)
+//    var openBookDetail = BehaviorRelay<Book?>(value: nil)
     
     init(bookProvider: BookProviderProtocol = BookProvider()) {
         self.bookProvider = bookProvider
     }
     
     func fetchBooks() {
-        bookProvider.fetchBooks(params: BookRequest())
+        bookProvider.fetchBooks(params: bookRequest)
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] books in
+            .subscribe(onNext: { [weak self] bookResponse in
                 guard let self = self else { return }
-                self.books.accept(books)
+                self.books.accept(bookResponse.items)
                 }, onError: { erro in
                  print(erro)
             })
@@ -35,7 +36,7 @@ class BooksViewModel {
     }
     
     func didSelected(book: Book) {
-//        openDetailPhoto.accept(photo)
+//        openBookDetail.accept(book)
     }
     
 }

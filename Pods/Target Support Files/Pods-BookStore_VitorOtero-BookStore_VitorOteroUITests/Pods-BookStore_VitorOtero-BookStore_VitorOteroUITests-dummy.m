@@ -1,5 +1,0 @@
-#import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_BookStore_VitorOtero_BookStore_VitorOteroUITests : NSObject
-@end
-@implementation PodsDummy_Pods_BookStore_VitorOtero_BookStore_VitorOteroUITests
-@end

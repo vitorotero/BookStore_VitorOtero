@@ -1,6 +1,0 @@
-framework module Pods_BookStore_VitorOtero_BookStore_VitorOteroUITests {
-  umbrella header "Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

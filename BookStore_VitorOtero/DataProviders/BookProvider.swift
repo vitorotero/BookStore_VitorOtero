@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 protocol BookProviderProtocol: class {
-    func fetchBooks(params: BookRequest) -> Observable<[Book]>
+    func fetchBooks(params: BookRequest) -> Observable<BookResponse>
 }
 
 class BookProvider: BookProviderProtocol {
@@ -18,8 +18,8 @@ class BookProvider: BookProviderProtocol {
     private let disposeBag = DisposeBag()
     private let apiManager = ApiManager()
     
-    func fetchBooks(params: BookRequest) -> Observable<[Book]> {
-        return apiManager.request(router: BookRouter.list(params: params), type: [Book].self)
+    func fetchBooks(params: BookRequest) -> Observable<BookResponse> {
+        return apiManager.request(router: BookRouter.list(params: params), type: BookResponse.self)
     }
     
 }

@@ -6,3 +6,15 @@
   Copyright © 2019 VitorOtero. All rights reserved.
 */
 
+/* Commum App */
+"close" = "Close";
+"ok" = "OK";
+"success" = "Success";
+/* Commum App */
+
+/* Books View Controller */
+"books_view_title_label" = "Books";
+"books_sheets_title_label" = "Select a option";
+"books_sheets_all_label" = "All Books";
+"books_sheets_favorites_label" = "Only favorites";
+/* Books View Controller */

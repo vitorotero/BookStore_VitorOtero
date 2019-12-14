@@ -19,12 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.tintColor = UIColor.gray
         
         self.window = window
-        
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().backgroundColor = .clear
-        UINavigationBar.appearance().isTranslucent = true
-        
+                
         let navigationController = UINavigationController(rootViewController: BooksViewController())
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

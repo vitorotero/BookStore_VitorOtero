@@ -21,13 +21,31 @@ class BookRequest: Codable {
     }
 }
 
-class Book: Codable {
-    
-    var id: Int = 0
-    
-    enum CodingKeys: String, CodingKey {
-        case id = "id"
-    }
-    
+class BookResponse: Codable {
+    var totalItems: Int = 0
+    var items: [Book]
 }
 
+class Book: Codable {
+    var id: String = ""
+    var etag: String = ""
+    var volumeInfo: VolumeInfo?
+    var saleInfo: SalesInfo?
+}
+
+class VolumeInfo: Codable {
+    var title: String = ""
+    var subtitle: String?
+    var authors: [String]?
+    var description: String?
+    var imageLinks: ImageInfo?
+}
+
+class ImageInfo: Codable {
+    var smallThumbnail: String = ""
+    var thumbnail: String = ""
+}
+
+class SalesInfo: Codable {
+    var buyLink: String?
+}

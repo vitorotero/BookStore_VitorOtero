@@ -97,7 +97,13 @@ extension BooksViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: - UICollectionViewDelegate
 extension BooksViewController: UICollectionViewDelegate {
-        
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.books.value.count - 1 {
+            viewModel.fetchMoreBooks()
+        }
+    }
+    
 }
 
 // MARK: - UICollectionViewDataSource

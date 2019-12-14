@@ -56,6 +56,8 @@ extension Routable {
             request.httpBody = self.paramsJson?.data(using: .utf8)
         }
         
+        print(request.url)
+        
         return request
     }
 }

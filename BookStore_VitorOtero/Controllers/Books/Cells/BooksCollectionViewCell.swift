@@ -17,7 +17,7 @@ class BooksCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var bookNameLabel: UILabel!
     
     // MARK: - Properties
-    public static let identifier = "BooksCollectionViewCell"
+    static let identifier = "BooksCollectionViewCell"
     
     // MARK: - Methods
     override func awakeFromNib() {
@@ -28,12 +28,16 @@ class BooksCollectionViewCell: UICollectionViewCell {
     private func setupView() {
         mainView.layer.cornerRadius = 5
         thumbnailImageView.kf.indicatorType = .activity
+        thumbnailImageView.image = "iconBook".imageAsset
     }
     
     func setup(item: Book) {
+        thumbnailImageView.image = "iconBook".imageAsset
+        
         if let images = item.volumeInfo?.imageLinks {
             let url = URL(string: images.thumbnail)
-            thumbnailImageView.kf.setImage(with: url)
+            thumbnailImageView.kf.setImage(with: url,
+                                           placeholder: "iconBook".imageAsset)
         }
         
         bookNameLabel.text = item.volumeInfo?.title

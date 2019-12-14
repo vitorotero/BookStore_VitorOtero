@@ -10,6 +10,8 @@ import Foundation
 
 class BookRequest: Codable {
     
+    static let paginationStep = 20
+    
     var type: String = "ios"
     var maxResults: Int = 20
     var startIndex: Int = 0
@@ -23,7 +25,7 @@ class BookRequest: Codable {
 
 class BookResponse: Codable {
     var totalItems: Int = 0
-    var items: [Book]
+    var items: [Book]?
 }
 
 class Book: Codable {

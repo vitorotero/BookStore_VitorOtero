@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests/Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework

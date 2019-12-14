@@ -18,7 +18,7 @@ class BooksViewModel {
     private var finishPagination: Bool = false
     
     var books = BehaviorRelay<[Book]>(value: [Book]())
-    //    var openBookDetail = BehaviorRelay<Book?>(value: nil)
+    var openBookDetail = BehaviorRelay<Book?>(value: nil)
     
     init(bookProvider: BookProviderProtocol = BookProvider()) {
         self.bookProvider = bookProvider
@@ -55,7 +55,7 @@ class BooksViewModel {
     }
     
     func didSelected(book: Book) {
-        //        openBookDetail.accept(book)
+        openBookDetail.accept(book)
     }
     
 }

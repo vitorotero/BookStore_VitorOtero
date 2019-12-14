@@ -53,6 +53,13 @@ class BooksViewController: UIViewController {
                 self.booksCollectionView.reloadData()
             })
             .disposed(by: disposeBag)
+        
+        viewModel.openBookDetail
+        .subscribe(onNext: { [weak self] book in
+            guard let self = self, let book = book else { return }
+            self.navigationController?.pushViewController(BookDetailViewController(book: book), animated: true)
+        })
+        .disposed(by: disposeBag)
     }
     
     private func setupCollectionView() {
@@ -102,6 +109,10 @@ extension BooksViewController: UICollectionViewDelegate {
         if indexPath.row == viewModel.books.value.count - 1 {
             viewModel.fetchMoreBooks()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelected(book: viewModel.books.value[indexPath.row])
     }
     
 }

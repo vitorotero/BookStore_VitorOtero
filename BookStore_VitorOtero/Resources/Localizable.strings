@@ -18,3 +18,7 @@
 "books_sheets_all_label" = "All Books";
 "books_sheets_favorites_label" = "Only favorites";
 /* Books View Controller */
+
+/* Book Detail View Controller */
+"book_detail_view_title_label" = "Book Detail";
+/* Book Detail View Controller */

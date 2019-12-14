@@ -35,11 +35,12 @@ protocol Routable {
 
 extension Routable {
     var url: URL {
-        return URL(string: "https://picsum.photos")!
+        return URL(string: "https://www.googleapis.com/books/v1/")!
     }
     
     var headers: [String: String]? {
-        return ["application/json": "Content-Type"]
+        return ["Content-Type": "application/json",
+                "Accept": "application/json"]
     }
     
     var request: URLRequest {
@@ -50,7 +51,6 @@ extension Routable {
         if self.paramsQueryString != nil {
             let urlComponents = NSURLComponents(string: ("\(self.url)\(self.path)/"))
             urlComponents?.queryItems = self.paramsQueryString
-            
             request.url = urlComponents?.url
         } else if self.paramsJson != nil {
             request.httpBody = self.paramsJson?.data(using: .utf8)

@@ -8,28 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		6673A78123A4FAA00025E492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673A78023A4FAA00025E492 /* AppDelegate.swift */; };
-		6673A78523A4FAA00025E492 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673A78423A4FAA00025E492 /* ViewController.swift */; };
 		6673A78A23A4FAA10025E492 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6673A78923A4FAA10025E492 /* Assets.xcassets */; };
 		6673A78D23A4FAA10025E492 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6673A78B23A4FAA10025E492 /* LaunchScreen.storyboard */; };
 		6673A79823A4FAA20025E492 /* BookStore_VitorOteroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673A79723A4FAA20025E492 /* BookStore_VitorOteroTests.swift */; };
-		6673A7A323A4FAA20025E492 /* BookStore_VitorOteroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673A7A223A4FAA20025E492 /* BookStore_VitorOteroUITests.swift */; };
 		66B04E1C23A4FCE500A5ED98 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B04E1B23A4FCE500A5ED98 /* ApiManager.swift */; };
 		66B04E1F23A4FE0900A5ED98 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B04E1D23A4FE0900A5ED98 /* BooksViewController.swift */; };
 		66B04E2023A4FE0900A5ED98 /* BooksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B04E1E23A4FE0900A5ED98 /* BooksViewController.xib */; };
-		AFD3780DD10980817892B769 /* Pods_BookStore_VitorOtero_BookStore_VitorOteroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 417B9D3AA36F0821C51D601E /* Pods_BookStore_VitorOtero_BookStore_VitorOteroUITests.framework */; };
+		66B04E2223A500EA00A5ED98 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B04E2123A500EA00A5ED98 /* BooksViewModel.swift */; };
+		66B04E2423A501F600A5ED98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66B04E2323A501F600A5ED98 /* Localizable.strings */; };
+		66B04E2823A5032D00A5ED98 /* BooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B04E2623A5032D00A5ED98 /* BooksCollectionViewCell.swift */; };
+		66B04E2923A5032D00A5ED98 /* BooksCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B04E2723A5032D00A5ED98 /* BooksCollectionViewCell.xib */; };
+		66B04E2B23A505D000A5ED98 /* BookRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B04E2A23A505D000A5ED98 /* BookRouter.swift */; };
+		66B04E2D23A5062100A5ED98 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B04E2C23A5062100A5ED98 /* Books.swift */; };
+		66B04E2F23A507DD00A5ED98 /* BookProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B04E2E23A507DD00A5ED98 /* BookProvider.swift */; };
 		B1FB33303439706443CBD94D /* Pods_BookStore_VitorOteroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE94474CA5C11D83BC842341 /* Pods_BookStore_VitorOteroTests.framework */; };
 		F0E7D1F180C51EB4DE52F38A /* Pods_BookStore_VitorOtero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A9DB70D4C83C339878BE04 /* Pods_BookStore_VitorOtero.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		6673A79423A4FAA20025E492 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6673A77523A4FAA00025E492 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6673A77C23A4FAA00025E492;
-			remoteInfo = BookStore_VitorOtero;
-		};
-		6673A79F23A4FAA20025E492 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6673A77523A4FAA00025E492 /* Project object */;
 			proxyType = 1;
@@ -45,19 +42,22 @@
 		47B9168DBBAFF0197D3465A9 /* Pods-BookStore_VitorOteroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookStore_VitorOteroTests.release.xcconfig"; path = "Target Support Files/Pods-BookStore_VitorOteroTests/Pods-BookStore_VitorOteroTests.release.xcconfig"; sourceTree = "<group>"; };
 		6673A77D23A4FAA00025E492 /* BookStore_VitorOtero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore_VitorOtero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6673A78023A4FAA00025E492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6673A78423A4FAA00025E492 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6673A78923A4FAA10025E492 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6673A78C23A4FAA10025E492 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6673A78E23A4FAA10025E492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6673A79323A4FAA20025E492 /* BookStore_VitorOteroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookStore_VitorOteroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6673A79723A4FAA20025E492 /* BookStore_VitorOteroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore_VitorOteroTests.swift; sourceTree = "<group>"; };
 		6673A79923A4FAA20025E492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6673A79E23A4FAA20025E492 /* BookStore_VitorOteroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookStore_VitorOteroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6673A7A223A4FAA20025E492 /* BookStore_VitorOteroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore_VitorOteroUITests.swift; sourceTree = "<group>"; };
-		6673A7A423A4FAA20025E492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66B04E1B23A4FCE500A5ED98 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		66B04E1D23A4FE0900A5ED98 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		66B04E1E23A4FE0900A5ED98 /* BooksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooksViewController.xib; sourceTree = "<group>"; };
+		66B04E2123A500EA00A5ED98 /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
+		66B04E2323A501F600A5ED98 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		66B04E2623A5032D00A5ED98 /* BooksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCollectionViewCell.swift; sourceTree = "<group>"; };
+		66B04E2723A5032D00A5ED98 /* BooksCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooksCollectionViewCell.xib; sourceTree = "<group>"; };
+		66B04E2A23A505D000A5ED98 /* BookRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRouter.swift; sourceTree = "<group>"; };
+		66B04E2C23A5062100A5ED98 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		66B04E2E23A507DD00A5ED98 /* BookProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookProvider.swift; sourceTree = "<group>"; };
 		6C04263E283A14B53055E49B /* Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests.release.xcconfig"; path = "Target Support Files/Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests/Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B9C4BA9425E4AAD4E7257579 /* Pods-BookStore_VitorOteroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookStore_VitorOteroTests.debug.xcconfig"; path = "Target Support Files/Pods-BookStore_VitorOteroTests/Pods-BookStore_VitorOteroTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE94474CA5C11D83BC842341 /* Pods_BookStore_VitorOteroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookStore_VitorOteroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,14 +82,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6673A79B23A4FAA20025E492 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AFD3780DD10980817892B769 /* Pods_BookStore_VitorOtero_BookStore_VitorOteroUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -111,7 +103,6 @@
 			children = (
 				6673A77F23A4FAA00025E492 /* BookStore_VitorOtero */,
 				6673A79623A4FAA20025E492 /* BookStore_VitorOteroTests */,
-				6673A7A123A4FAA20025E492 /* BookStore_VitorOteroUITests */,
 				6673A77E23A4FAA00025E492 /* Products */,
 				2D539947455307D676399A44 /* Pods */,
 				AF8F7B77F367510A41140F21 /* Frameworks */,
@@ -123,7 +114,6 @@
 			children = (
 				6673A77D23A4FAA00025E492 /* BookStore_VitorOtero.app */,
 				6673A79323A4FAA20025E492 /* BookStore_VitorOteroTests.xctest */,
-				6673A79E23A4FAA20025E492 /* BookStore_VitorOteroUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,7 +127,6 @@
 				66B04E1723A4FC6B00A5ED98 /* Networking */,
 				66B04E1623A4FC6100A5ED98 /* Resources */,
 				66B04E1823A4FC7400A5ED98 /* SupportFiles */,
-				6673A78423A4FAA00025E492 /* ViewController.swift */,
 			);
 			path = BookStore_VitorOtero;
 			sourceTree = "<group>";
@@ -151,15 +140,6 @@
 			path = BookStore_VitorOteroTests;
 			sourceTree = "<group>";
 		};
-		6673A7A123A4FAA20025E492 /* BookStore_VitorOteroUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6673A7A223A4FAA20025E492 /* BookStore_VitorOteroUITests.swift */,
-				6673A7A423A4FAA20025E492 /* Info.plist */,
-			);
-			path = BookStore_VitorOteroUITests;
-			sourceTree = "<group>";
-		};
 		66B04E1323A4FC3700A5ED98 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +151,7 @@
 		66B04E1423A4FC4A00A5ED98 /* DataProviders */ = {
 			isa = PBXGroup;
 			children = (
+				66B04E2E23A507DD00A5ED98 /* BookProvider.swift */,
 			);
 			path = DataProviders;
 			sourceTree = "<group>";
@@ -178,6 +159,7 @@
 		66B04E1523A4FC5A00A5ED98 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				66B04E2C23A5062100A5ED98 /* Books.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,6 +169,7 @@
 			children = (
 				6673A78B23A4FAA10025E492 /* LaunchScreen.storyboard */,
 				6673A78923A4FAA10025E492 /* Assets.xcassets */,
+				66B04E2323A501F600A5ED98 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -212,8 +195,10 @@
 		66B04E1923A4FC8E00A5ED98 /* Books */ = {
 			isa = PBXGroup;
 			children = (
+				66B04E2523A5030D00A5ED98 /* Cells */,
 				66B04E1D23A4FE0900A5ED98 /* BooksViewController.swift */,
 				66B04E1E23A4FE0900A5ED98 /* BooksViewController.xib */,
+				66B04E2123A500EA00A5ED98 /* BooksViewModel.swift */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -221,8 +206,18 @@
 		66B04E1A23A4FCD400A5ED98 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				66B04E2A23A505D000A5ED98 /* BookRouter.swift */,
 			);
 			path = Routers;
+			sourceTree = "<group>";
+		};
+		66B04E2523A5030D00A5ED98 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				66B04E2623A5032D00A5ED98 /* BooksCollectionViewCell.swift */,
+				66B04E2723A5032D00A5ED98 /* BooksCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		AF8F7B77F367510A41140F21 /* Frameworks */ = {
@@ -276,26 +271,6 @@
 			productReference = 6673A79323A4FAA20025E492 /* BookStore_VitorOteroTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6673A79D23A4FAA20025E492 /* BookStore_VitorOteroUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6673A7AD23A4FAA20025E492 /* Build configuration list for PBXNativeTarget "BookStore_VitorOteroUITests" */;
-			buildPhases = (
-				BE731B8919130D2D1B8B9048 /* [CP] Check Pods Manifest.lock */,
-				6673A79A23A4FAA20025E492 /* Sources */,
-				6673A79B23A4FAA20025E492 /* Frameworks */,
-				6673A79C23A4FAA20025E492 /* Resources */,
-				1BBEE757327334F977857794 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6673A7A023A4FAA20025E492 /* PBXTargetDependency */,
-			);
-			name = BookStore_VitorOteroUITests;
-			productName = BookStore_VitorOteroUITests;
-			productReference = 6673A79E23A4FAA20025E492 /* BookStore_VitorOteroUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -310,10 +285,6 @@
 						CreatedOnToolsVersion = 11.3;
 					};
 					6673A79223A4FAA20025E492 = {
-						CreatedOnToolsVersion = 11.3;
-						TestTargetID = 6673A77C23A4FAA00025E492;
-					};
-					6673A79D23A4FAA20025E492 = {
 						CreatedOnToolsVersion = 11.3;
 						TestTargetID = 6673A77C23A4FAA00025E492;
 					};
@@ -334,7 +305,6 @@
 			targets = (
 				6673A77C23A4FAA00025E492 /* BookStore_VitorOtero */,
 				6673A79223A4FAA20025E492 /* BookStore_VitorOteroTests */,
-				6673A79D23A4FAA20025E492 /* BookStore_VitorOteroUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -344,7 +314,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66B04E2923A5032D00A5ED98 /* BooksCollectionViewCell.xib in Resources */,
 				6673A78D23A4FAA10025E492 /* LaunchScreen.storyboard in Resources */,
+				66B04E2423A501F600A5ED98 /* Localizable.strings in Resources */,
 				6673A78A23A4FAA10025E492 /* Assets.xcassets in Resources */,
 				66B04E2023A4FE0900A5ED98 /* BooksViewController.xib in Resources */,
 			);
@@ -357,33 +329,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6673A79C23A4FAA20025E492 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1BBEE757327334F977857794 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests/Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests/Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests/Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		93FF65DE61733313A9784DFA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -400,28 +348,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BookStore_VitorOtero-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BE731B8919130D2D1B8B9048 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -475,8 +401,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				66B04E1F23A4FE0900A5ED98 /* BooksViewController.swift in Sources */,
-				6673A78523A4FAA00025E492 /* ViewController.swift in Sources */,
+				66B04E2B23A505D000A5ED98 /* BookRouter.swift in Sources */,
+				66B04E2223A500EA00A5ED98 /* BooksViewModel.swift in Sources */,
+				66B04E2F23A507DD00A5ED98 /* BookProvider.swift in Sources */,
+				66B04E2D23A5062100A5ED98 /* Books.swift in Sources */,
 				6673A78123A4FAA00025E492 /* AppDelegate.swift in Sources */,
+				66B04E2823A5032D00A5ED98 /* BooksCollectionViewCell.swift in Sources */,
 				66B04E1C23A4FCE500A5ED98 /* ApiManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,14 +419,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6673A79A23A4FAA20025E492 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6673A7A323A4FAA20025E492 /* BookStore_VitorOteroUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -504,11 +426,6 @@
 			isa = PBXTargetDependency;
 			target = 6673A77C23A4FAA00025E492 /* BookStore_VitorOtero */;
 			targetProxy = 6673A79423A4FAA20025E492 /* PBXContainerItemProxy */;
-		};
-		6673A7A023A4FAA20025E492 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6673A77C23A4FAA00025E492 /* BookStore_VitorOtero */;
-			targetProxy = 6673A79F23A4FAA20025E492 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -574,7 +491,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -628,7 +545,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -722,46 +639,6 @@
 			};
 			name = Release;
 		};
-		6673A7AE23A4FAA20025E492 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0D2A1D647112ABD953041AD /* Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BookStore_VitorOteroUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "pt.tecapp.BookStore-VitorOteroUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BookStore_VitorOtero;
-			};
-			name = Debug;
-		};
-		6673A7AF23A4FAA20025E492 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C04263E283A14B53055E49B /* Pods-BookStore_VitorOtero-BookStore_VitorOteroUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BookStore_VitorOteroUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "pt.tecapp.BookStore-VitorOteroUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BookStore_VitorOtero;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -788,15 +665,6 @@
 			buildConfigurations = (
 				6673A7AB23A4FAA20025E492 /* Debug */,
 				6673A7AC23A4FAA20025E492 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6673A7AD23A4FAA20025E492 /* Build configuration list for PBXNativeTarget "BookStore_VitorOteroUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6673A7AE23A4FAA20025E492 /* Debug */,
-				6673A7AF23A4FAA20025E492 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

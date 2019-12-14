@@ -16,8 +16,4 @@ target 'BookStore_VitorOtero' do
     # Pods for testing
   end
 
-  target 'BookStore_VitorOteroUITests' do
-    # Pods for testing
-  end
-
 end

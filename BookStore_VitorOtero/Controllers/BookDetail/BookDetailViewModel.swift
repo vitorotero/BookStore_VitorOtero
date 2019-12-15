@@ -44,29 +44,33 @@ class BookDetailViewModel {
     
     func favoriteBook() {
         if isFavorited.value {
-            bookProvider.removeFavoriteBook(book: book.value)
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] _ in
-                guard let self = self else { return }
-                self.isFavorited.accept(false)
-                }, onError: { erro in
-                    print(erro)
-            })
-            .disposed(by: disposeBag)
+            uncheckFavoriteBook()
         } else {
-            bookProvider.addFavoriteBook(book: book.value)
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] _ in
-                guard let self = self else { return }
-                self.isFavorited.accept(true)
-                }, onError: { erro in
-                    print(erro)
-            })
-            .disposed(by: disposeBag)
+            checkFavoriteBook()
         }
     }
     
-    func removeFavoriteBook() {
-        
+    private func checkFavoriteBook() {
+        bookProvider.addFavoriteBook(book: book.value)
+        .observeOn(MainScheduler.instance)
+        .subscribe(onNext: { [weak self] _ in
+            guard let self = self else { return }
+            self.isFavorited.accept(true)
+            }, onError: { erro in
+                print(erro)
+        })
+        .disposed(by: disposeBag)
+    }
+    
+    private func uncheckFavoriteBook() {
+        bookProvider.removeFavoriteBook(book: book.value)
+        .observeOn(MainScheduler.instance)
+        .subscribe(onNext: { [weak self] _ in
+            guard let self = self else { return }
+            self.isFavorited.accept(false)
+            }, onError: { erro in
+                print(erro)
+        })
+        .disposed(by: disposeBag)
     }
 }

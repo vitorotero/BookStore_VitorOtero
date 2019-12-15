@@ -20,10 +20,8 @@ extension Object {
 }
 
 extension Reactive where Base == Realm {
-    func save<R: RealmRepresentable>(
-        _ entity: R,
-        update: Bool = true
-    ) -> Observable<Void> where R.RealmType: Object {
+    
+    func save<R: RealmRepresentable>(_ entity: R, update: Bool = true) -> Observable<Void> where R.RealmType: Object {
         return Observable.create { observer in
             do {
                 try self.base.write {
@@ -42,9 +40,11 @@ extension Reactive where Base == Realm {
     func delete<R: RealmRepresentable>(_ entity: R) -> Observable<Void> where R.RealmType: Object {
         return Observable.create { observer in
             do {
-                try self.base.write {
-                    self.base.delete(entity.asRealm())
-                }
+                try self.base.write({
+                    let realmObjects = self.base.objects(R.RealmType.self).filter("id=%@", entity.uid)
+                    self.base.delete(realmObjects)
+                })
+                
                 observer.onNext(())
                 observer.onCompleted()
             } catch {

@@ -15,6 +15,8 @@ class BookDetailViewModel {
     private let disposeBag: DisposeBag = DisposeBag()
     private var bookProvider: BookProviderProtocol!
     var book = BehaviorRelay<Book>(value: Book())
+    var buyLink = BehaviorRelay<String?>(value: nil)
+    var isFavorited = BehaviorRelay<Bool>(value: false)
     
     init(bookProvider: BookProviderProtocol = BookProvider()) {
         self.bookProvider = bookProvider
@@ -24,26 +26,44 @@ class BookDetailViewModel {
         self.book.accept(book)
     }
     
+    func openBuyLink() {
+        self.buyLink.accept(book.value.saleInfo?.buyLink)
+    }
+    
     func fetchFavoriteBook() {
         bookProvider.fetchFavoriteBook(book: book.value)
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] book in
-                print(book)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.isFavorited.accept(true)
                 },onError: { erro in
-                    print(erro)
+                    self.isFavorited.accept(false)
             })
             .disposed(by: disposeBag)
     }
     
-    func addFavoriteBook() {
-        bookProvider.addFavoriteBook(book: book.value)
+    func favoriteBook() {
+        if isFavorited.value {
+            bookProvider.removeFavoriteBook(book: book.value)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] _ in
-                print("sucesso")
+                guard let self = self else { return }
+                self.isFavorited.accept(false)
                 }, onError: { erro in
                     print(erro)
             })
             .disposed(by: disposeBag)
+        } else {
+            bookProvider.addFavoriteBook(book: book.value)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.isFavorited.accept(true)
+                }, onError: { erro in
+                    print(erro)
+            })
+            .disposed(by: disposeBag)
+        }
     }
     
     func removeFavoriteBook() {

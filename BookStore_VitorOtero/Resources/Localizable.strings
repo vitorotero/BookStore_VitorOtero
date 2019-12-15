@@ -21,4 +21,10 @@
 
 /* Book Detail View Controller */
 "book_detail_view_title_label" = "Book Detail";
+"book_detail_view_book_title_label" = "Title";
+"book_detail_view_authors_label" = "Authors";
+"book_detail_view_buy_label" = "Buy";
+"book_detail_view_description_label" = "Description";
+"book_detail_view_favorite_label" = "favorite";
+"book_detail_view_unfavorite_label" = "unfavorite";
 /* Book Detail View Controller */

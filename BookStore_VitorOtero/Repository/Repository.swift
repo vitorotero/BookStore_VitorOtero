@@ -48,7 +48,6 @@ AbstractRespository<T> where T == T.RealmType.DomainType, T.RealmType: Object {
         self.configuration = configuration
         let name = "pt.tecapp.BookStore-VitorOtero"
         scheduler = RunLoopThreadScheduler(threadName: name)
-        print("File 📁 url: \(RLMRealmPathForFile("default.realm"))")
     }
     
     override func queryAll() -> Observable<[T]> {
@@ -74,7 +73,9 @@ AbstractRespository<T> where T == T.RealmType.DomainType, T.RealmType: Object {
     }
     
     override func delete(_ entity: T) -> Observable<Void> {
-        return Observable.deferred { self.realm.rx.delete(entity) }
+        return Observable.deferred {
+            self.realm.rx.delete(entity)
+        }
             .subscribeOn(scheduler)
     }
     

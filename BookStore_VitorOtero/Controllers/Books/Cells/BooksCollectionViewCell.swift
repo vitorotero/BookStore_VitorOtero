@@ -28,7 +28,6 @@ class BooksCollectionViewCell: UICollectionViewCell {
     private func setupView() {
         mainView.layer.cornerRadius = 5
         thumbnailImageView.kf.indicatorType = .activity
-        thumbnailImageView.image = "iconBook".imageAsset
     }
     
     func setup(item: Book) {

@@ -14,6 +14,7 @@
 
 /* Books View Controller */
 "books_view_title_label" = "Books";
+"books_view_empty_label" = "There are no books to display";
 "books_sheets_title_label" = "Select a option";
 "books_sheets_all_label" = "All Books";
 "books_sheets_favorites_label" = "Only favorites";

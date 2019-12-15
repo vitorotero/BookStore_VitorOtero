@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BooksViewController" customModule="BookStore_VitorOtero" customModuleProvider="target">
             <connections>
                 <outlet property="booksCollectionView" destination="UhK-S7-GAQ" id="F0j-hl-7XG"/>
+                <outlet property="emptyLabel" destination="e8d-Xq-hWs" id="M4p-Me-1Ib"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,12 +34,22 @@
                         <outlet property="delegate" destination="-1" id="YAr-ZV-bYT"/>
                     </connections>
                 </collectionView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8d-Xq-hWs">
+                    <rect key="frame" x="16" y="437.5" width="382" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="UhK-S7-GAQ" secondAttribute="bottom" id="2GB-TN-KX2"/>
+                <constraint firstItem="e8d-Xq-hWs" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="3Kf-G5-Lr6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UhK-S7-GAQ" secondAttribute="trailing" id="8jU-Bd-zAD"/>
+                <constraint firstItem="e8d-Xq-hWs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="I3d-XF-8eR"/>
                 <constraint firstItem="UhK-S7-GAQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Lvh-6D-Dl3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e8d-Xq-hWs" secondAttribute="trailing" constant="16" id="MwO-q5-lX8"/>
+                <constraint firstItem="e8d-Xq-hWs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="jMm-s7-nQe"/>
                 <constraint firstItem="UhK-S7-GAQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="p8O-LA-Ioj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

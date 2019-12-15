@@ -13,6 +13,7 @@ class BooksViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var booksCollectionView: UICollectionView!
+    @IBOutlet weak var emptyLabel: UILabel!
     
     // MARK: - Properties
     private let disposeBag = DisposeBag()
@@ -35,6 +36,7 @@ class BooksViewController: UIViewController {
         setupCollectionView()
         
         viewModel.fetchBooks()
+        viewModel.fetchFavoriteBooks()
     }
     
     // MARK: - Private Methods
@@ -44,22 +46,33 @@ class BooksViewController: UIViewController {
                                                             style: .done,
                                                             target: self,
                                                             action: #selector(openActionView))
+        
+        emptyLabel.text = "books_view_empty_label".localized
     }
     
     private func setupBindView() {
         viewModel.books
             .subscribe(onNext: { [weak self] books in
-                guard let self = self, !books.isEmpty else { return }
+                guard let self = self else { return }
+                
+                if books.isEmpty {
+                    self.booksCollectionView.isHidden = true
+                    self.emptyLabel.isHidden = false
+                } else {
+                    self.booksCollectionView.isHidden = false
+                    self.emptyLabel.isHidden = true
+                }
+                
                 self.booksCollectionView.reloadData()
             })
             .disposed(by: disposeBag)
         
         viewModel.openBookDetail
-        .subscribe(onNext: { [weak self] book in
-            guard let self = self, let book = book else { return }
-            self.navigationController?.pushViewController(BookDetailViewController(book: book), animated: true)
-        })
-        .disposed(by: disposeBag)
+            .subscribe(onNext: { [weak self] book in
+                guard let self = self, let book = book else { return }
+                self.navigationController?.pushViewController(BookDetailViewController(book: book), animated: true)
+            })
+            .disposed(by: disposeBag)
     }
     
     private func setupCollectionView() {
@@ -71,11 +84,15 @@ class BooksViewController: UIViewController {
         let actionSheetController = UIAlertController(title: "books_sheets_title_label".localized,
                                                       message: nil,
                                                       preferredStyle: .actionSheet)
-
-        let allBooksAction = UIAlertAction(title: "books_sheets_all_label".localized, style: .default) { action -> Void in
+        
+        let allBooksAction = UIAlertAction(title: "books_sheets_all_label".localized, style: .default) { [weak self] action -> Void in
+            guard let self = self else { return }
+            self.viewModel.showAllBooks()
         }
-
-        let favoritesAction = UIAlertAction(title: "books_sheets_favorites_label".localized, style: .default) { action -> Void in
+        
+        let favoritesAction = UIAlertAction(title: "books_sheets_favorites_label".localized, style: .default) { [weak self] action -> Void in
+            guard let self = self else { return }
+            self.viewModel.showFavoriteBooks()
         }
         
         let closeAction = UIAlertAction(title: "close".localized, style: .cancel) { action -> Void in
@@ -86,7 +103,7 @@ class BooksViewController: UIViewController {
         actionSheetController.addAction(favoritesAction)
         actionSheetController.addAction(closeAction)
         self.present(actionSheetController, animated: true, completion: nil)
-
+        
     }
 }
 
@@ -106,7 +123,7 @@ extension BooksViewController: UICollectionViewDelegateFlowLayout {
 extension BooksViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row == viewModel.books.value.count - 1 {
+        if indexPath.row == viewModel.books.value.count - 1 && !viewModel.isFavoriteEnable {
             viewModel.fetchMoreBooks()
         }
     }
@@ -119,7 +136,7 @@ extension BooksViewController: UICollectionViewDelegate {
 
 // MARK: - UICollectionViewDataSource
 extension BooksViewController: UICollectionViewDataSource {
-        
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.books.value.count
     }

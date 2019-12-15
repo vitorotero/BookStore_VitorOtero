@@ -16,9 +16,12 @@ class BooksViewModel {
     private let disposeBag: DisposeBag = DisposeBag()
     private var bookRequest = BookRequest()
     private var finishPagination: Bool = false
+    private var safeBooks: [Book] = []
+    private var favoriteBooks: [Book] = []
     
     var books = BehaviorRelay<[Book]>(value: [Book]())
     var openBookDetail = BehaviorRelay<Book?>(value: nil)
+    var isFavoriteEnable = false
     
     init(bookProvider: BookProviderProtocol = BookProvider()) {
         self.bookProvider = bookProvider
@@ -31,6 +34,7 @@ class BooksViewModel {
                 guard let self = self else { return }
                 
                 self.books.accept(bookResponse.items ?? [])
+                self.safeBooks = self.books.value
                 }, onError: { erro in
                     print(erro)
             })
@@ -48,10 +52,36 @@ class BooksViewModel {
                 
                 self.finishPagination = bookResponse.items?.isEmpty ?? true
                 self.books.acceptAppending(bookResponse.items ?? [])
+                self.safeBooks = self.books.value
                 }, onError: { erro in
                     print(erro)
             })
             .disposed(by: disposeBag)
+    }
+    
+    func fetchFavoriteBooks() {
+        bookProvider.fetchFavoriteBooks()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] books in
+                guard let self = self else { return }
+                self.favoriteBooks = books
+                if self.isFavoriteEnable {
+                    self.books.accept(self.favoriteBooks)
+                }
+                }, onError: { erro in
+                    print(erro)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func showFavoriteBooks() {
+        self.isFavoriteEnable = true
+        self.books.accept(self.favoriteBooks)
+    }
+    
+    func showAllBooks() {
+        self.isFavoriteEnable = false
+        self.books.accept(self.safeBooks)
     }
     
     func didSelected(book: Book) {

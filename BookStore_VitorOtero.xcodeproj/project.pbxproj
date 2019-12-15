@@ -187,9 +187,9 @@
 			children = (
 				669FCEFA23A653B900E019D9 /* BaseConvertions.swift */,
 				669FCEF823A6539300E019D9 /* RMBook.swift */,
-				669FCF0423A659CA00E019D9 /* RMVolumeInfo.swift */,
-				669FCF0623A65BFB00E019D9 /* RMSalesInfo.swift */,
 				669FCF0823A65D3100E019D9 /* RMImageInfo.swift */,
+				669FCF0623A65BFB00E019D9 /* RMSalesInfo.swift */,
+				669FCF0423A659CA00E019D9 /* RMVolumeInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

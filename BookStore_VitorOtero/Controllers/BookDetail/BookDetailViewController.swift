@@ -48,6 +48,10 @@ class BookDetailViewController: UIViewController {
     // MARK: - Private Methods
     private func setupView() {
         navigationItem.title = "book_detail_view_title_label".localized
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "book_detail_view_favorite_label".localized,
+                                                                 style: .done,
+                                                                 target: self,
+                                                                 action: #selector(self.favoriteButtonTapped))
         
         buyLinkButton.setTitleColor(UIColor.systemBlue, for: .normal)
         titleLabel.text = "book_detail_view_book_title_label".localized
@@ -99,10 +103,7 @@ class BookDetailViewController: UIViewController {
             .subscribe(onNext: { [weak self] favorited in
                 guard let self = self else { return }
                 let title = favorited ? "book_detail_view_unfavorite_label".localized : "book_detail_view_favorite_label".localized
-                self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: title,
-                                                                         style: .done,
-                                                                         target: self,
-                                                                         action: #selector(self.favoriteButtonTapped))
+                self.navigationItem.rightBarButtonItem?.title = title
             })
             .disposed(by: disposeBag)
         

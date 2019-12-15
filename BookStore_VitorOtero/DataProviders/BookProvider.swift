@@ -11,15 +11,25 @@ import RxSwift
 
 protocol BookProviderProtocol: class {
     func fetchBooks(params: BookRequest) -> Observable<BookResponse>
+    func addFavoriteBook(book: Book) -> Observable<Void>
+    func fetchFavoriteBook(book: Book) -> Observable<Book>
 }
 
 class BookProvider: BookProviderProtocol {
     
     private let disposeBag = DisposeBag()
     private let apiManager = ApiManager()
+    private let bookRepository = Repository<Book>()
     
     func fetchBooks(params: BookRequest) -> Observable<BookResponse> {
         return apiManager.request(router: BookRouter.list(params: params), type: BookResponse.self)
     }
     
+    func addFavoriteBook(book: Book) -> Observable<Void> {
+        return bookRepository.save(book)
+    }
+    
+    func fetchFavoriteBook(book: Book) -> Observable<Book> {
+        return bookRepository.query(by: book.id)
+    }
 }

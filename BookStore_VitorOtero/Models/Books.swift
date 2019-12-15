@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BookRequest: Codable {
+struct BookRequest: Codable {
     
     static let paginationStep = 20
     
@@ -23,31 +23,31 @@ class BookRequest: Codable {
     }
 }
 
-class BookResponse: Codable {
+struct BookResponse: Codable {
     var totalItems: Int = 0
     var items: [Book]?
 }
 
-class Book: Codable {
+struct Book: Codable {
     var id: String = ""
     var etag: String = ""
     var volumeInfo: VolumeInfo?
     var saleInfo: SalesInfo?
 }
 
-class VolumeInfo: Codable {
+struct VolumeInfo: Codable {
     var title: String = ""
     var subtitle: String?
     var authors: [String]?
     var description: String?
-    var imageLinks: ImageInfo?
+    var imageLinks: ImageInfo? = nil
 }
 
-class ImageInfo: Codable {
+struct ImageInfo: Codable {
     var smallThumbnail: String = ""
     var thumbnail: String = ""
 }
 
-class SalesInfo: Codable {
+struct SalesInfo: Codable {
     var buyLink: String?
 }

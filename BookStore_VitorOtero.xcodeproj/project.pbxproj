@@ -11,6 +11,15 @@
 		6673A78A23A4FAA10025E492 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6673A78923A4FAA10025E492 /* Assets.xcassets */; };
 		6673A78D23A4FAA10025E492 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6673A78B23A4FAA10025E492 /* LaunchScreen.storyboard */; };
 		6673A79823A4FAA20025E492 /* BookStore_VitorOteroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6673A79723A4FAA20025E492 /* BookStore_VitorOteroTests.swift */; };
+		669FCEF623A652B600E019D9 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669FCEF523A652B600E019D9 /* Repository.swift */; };
+		669FCEF923A6539300E019D9 /* RMBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669FCEF823A6539300E019D9 /* RMBook.swift */; };
+		669FCEFB23A653B900E019D9 /* BaseConvertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669FCEFA23A653B900E019D9 /* BaseConvertions.swift */; };
+		669FCEFF23A6554100E019D9 /* RealmExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669FCEFE23A6554100E019D9 /* RealmExt.swift */; };
+		669FCF0123A6557700E019D9 /* RunLoopThreadScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669FCF0023A6557700E019D9 /* RunLoopThreadScheduler.swift */; };
+		669FCF0323A6580200E019D9 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669FCF0223A6580200E019D9 /* Observable.swift */; };
+		669FCF0523A659CA00E019D9 /* RMVolumeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669FCF0423A659CA00E019D9 /* RMVolumeInfo.swift */; };
+		669FCF0723A65BFB00E019D9 /* RMSalesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669FCF0623A65BFB00E019D9 /* RMSalesInfo.swift */; };
+		669FCF0923A65D3100E019D9 /* RMImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669FCF0823A65D3100E019D9 /* RMImageInfo.swift */; };
 		66B04E1C23A4FCE500A5ED98 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B04E1B23A4FCE500A5ED98 /* ApiManager.swift */; };
 		66B04E1F23A4FE0900A5ED98 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B04E1D23A4FE0900A5ED98 /* BooksViewController.swift */; };
 		66B04E2023A4FE0900A5ED98 /* BooksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B04E1E23A4FE0900A5ED98 /* BooksViewController.xib */; };
@@ -54,6 +63,15 @@
 		6673A79323A4FAA20025E492 /* BookStore_VitorOteroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookStore_VitorOteroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6673A79723A4FAA20025E492 /* BookStore_VitorOteroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore_VitorOteroTests.swift; sourceTree = "<group>"; };
 		6673A79923A4FAA20025E492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		669FCEF523A652B600E019D9 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		669FCEF823A6539300E019D9 /* RMBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMBook.swift; sourceTree = "<group>"; };
+		669FCEFA23A653B900E019D9 /* BaseConvertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConvertions.swift; sourceTree = "<group>"; };
+		669FCEFE23A6554100E019D9 /* RealmExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExt.swift; sourceTree = "<group>"; };
+		669FCF0023A6557700E019D9 /* RunLoopThreadScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLoopThreadScheduler.swift; sourceTree = "<group>"; };
+		669FCF0223A6580200E019D9 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		669FCF0423A659CA00E019D9 /* RMVolumeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMVolumeInfo.swift; sourceTree = "<group>"; };
+		669FCF0623A65BFB00E019D9 /* RMSalesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMSalesInfo.swift; sourceTree = "<group>"; };
+		669FCF0823A65D3100E019D9 /* RMImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMImageInfo.swift; sourceTree = "<group>"; };
 		66B04E1B23A4FCE500A5ED98 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		66B04E1D23A4FE0900A5ED98 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		66B04E1E23A4FE0900A5ED98 /* BooksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooksViewController.xib; sourceTree = "<group>"; };
@@ -138,6 +156,7 @@
 				66B04E3023A52F8400A5ED98 /* Extensions */,
 				66B04E1523A4FC5A00A5ED98 /* Models */,
 				66B04E1723A4FC6B00A5ED98 /* Networking */,
+				669FCEF423A6529700E019D9 /* Repository */,
 				66B04E1623A4FC6100A5ED98 /* Resources */,
 				66B04E1823A4FC7400A5ED98 /* SupportFiles */,
 			);
@@ -151,6 +170,37 @@
 				6673A79923A4FAA20025E492 /* Info.plist */,
 			);
 			path = BookStore_VitorOteroTests;
+			sourceTree = "<group>";
+		};
+		669FCEF423A6529700E019D9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				669FCEFD23A654FF00E019D9 /* Extensions */,
+				669FCEF723A6537C00E019D9 /* Models */,
+				669FCEF523A652B600E019D9 /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		669FCEF723A6537C00E019D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				669FCEFA23A653B900E019D9 /* BaseConvertions.swift */,
+				669FCEF823A6539300E019D9 /* RMBook.swift */,
+				669FCF0423A659CA00E019D9 /* RMVolumeInfo.swift */,
+				669FCF0623A65BFB00E019D9 /* RMSalesInfo.swift */,
+				669FCF0823A65D3100E019D9 /* RMImageInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		669FCEFD23A654FF00E019D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				669FCEFE23A6554100E019D9 /* RealmExt.swift */,
+				669FCF0023A6557700E019D9 /* RunLoopThreadScheduler.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		66B04E1323A4FC3700A5ED98 /* Controllers */ = {
@@ -240,6 +290,7 @@
 				66B04E3123A52F9300A5ED98 /* UIColor.swift */,
 				66B04E3323A534CB00A5ED98 /* String.swift */,
 				66B04E3723A5441F00A5ED98 /* BehaviorRelay.swift */,
+				669FCF0223A6580200E019D9 /* Observable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -438,16 +489,25 @@
 				66B04E1F23A4FE0900A5ED98 /* BooksViewController.swift in Sources */,
 				66B04E2B23A505D000A5ED98 /* BookRouter.swift in Sources */,
 				66B04E3C23A548A500A5ED98 /* BookDetailViewController.swift in Sources */,
+				669FCEF923A6539300E019D9 /* RMBook.swift in Sources */,
 				66B04E3F23A5491C00A5ED98 /* BookDetailViewModel.swift in Sources */,
+				669FCEFF23A6554100E019D9 /* RealmExt.swift in Sources */,
+				669FCEFB23A653B900E019D9 /* BaseConvertions.swift in Sources */,
 				66B04E3423A534CB00A5ED98 /* String.swift in Sources */,
 				66B04E2223A500EA00A5ED98 /* BooksViewModel.swift in Sources */,
 				66B04E3823A5441F00A5ED98 /* BehaviorRelay.swift in Sources */,
+				669FCEF623A652B600E019D9 /* Repository.swift in Sources */,
+				669FCF0323A6580200E019D9 /* Observable.swift in Sources */,
 				66B04E2F23A507DD00A5ED98 /* BookProvider.swift in Sources */,
 				66B04E3223A52F9300A5ED98 /* UIColor.swift in Sources */,
+				669FCF0923A65D3100E019D9 /* RMImageInfo.swift in Sources */,
+				669FCF0123A6557700E019D9 /* RunLoopThreadScheduler.swift in Sources */,
 				66B04E2D23A5062100A5ED98 /* Books.swift in Sources */,
+				669FCF0523A659CA00E019D9 /* RMVolumeInfo.swift in Sources */,
 				6673A78123A4FAA00025E492 /* AppDelegate.swift in Sources */,
 				66B04E2823A5032D00A5ED98 /* BooksCollectionViewCell.swift in Sources */,
 				66B04E1C23A4FCE500A5ED98 /* ApiManager.swift in Sources */,
+				669FCF0723A65BFB00E019D9 /* RMSalesInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

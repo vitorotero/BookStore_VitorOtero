@@ -14,6 +14,7 @@ class BookDetailViewController: UIViewController {
     // MARK: - IBOutlets
     
     
+    
     // MARK: - Properties
     private let disposeBag = DisposeBag()
     private var viewModel: BookDetailViewModel!
@@ -33,6 +34,8 @@ class BookDetailViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupBindView()
+        
+        viewModel.fetchFavoriteBook()
     }
     
     // MARK: - Private Methods
@@ -46,5 +49,10 @@ class BookDetailViewController: UIViewController {
             print(book.id)
         })
         .disposed(by: disposeBag)
+    }
+    
+    // MARK: - Private Methods
+    @IBAction func addFavoriteButtonTapped(_ sender: Any) {
+        viewModel.addFavoriteBook()
     }
 }
